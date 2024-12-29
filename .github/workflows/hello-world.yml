@@ -2,7 +2,7 @@ name: Hello World Workflow!
 
 on:
   schedule:
-    - cron: "15 10 * * *"
+    - cron: "52 4 * * *"
 
 jobs:
   say-hello:
