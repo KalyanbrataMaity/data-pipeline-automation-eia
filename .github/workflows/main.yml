@@ -1,0 +1,14 @@
+name: Hello World Workflow
+
+on:
+  schedule:
+    # Trigger the workflow at 10:30 AM IST (5:00 AM UTC)
+    - cron: "8 5 * * *"
+
+jobs:
+  say-hello:
+    runs-on: macos-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, World!"
