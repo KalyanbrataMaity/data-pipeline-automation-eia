@@ -1,13 +1,14 @@
-name: Hello World!
+name: Hello World Workflow!
 
 on:
-  schedule:
-    - cron: '30 8 * * *'
+  push:
+    branches:
+      - main
+
 jobs:
-  hello-world:
-    runs-on: ubuntu-22.04
-    container:
-      image: ubuntu:22.04
+  say-hello:
+    runs-on: macos-latest
+
     steps:
-      - name: print-hello-world
-        run: echo "Hello World"
+    - name: Say Hello
+      run: echo "Hello, World!"
